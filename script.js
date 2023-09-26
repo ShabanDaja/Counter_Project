@@ -1,5 +1,17 @@
 const increaseButtonEl = document.querySelector('.counter__button--increase');
+const decreaseButtonEl = document.querySelector('.counter__button--deacrease');
 const counterValueEl = document.querySelector('.counter__value');
+
+decreaseButtonEl.addEventListener('click', function() {
+
+    const currentValue = counterValueEl.textContent;
+
+    const currentValueAsNumber = +currentValue;
+
+    const newValue = currentValueAsNumber -1;
+
+    counterValueEl.textContent = newValue;
+})
 
 increaseButtonEl.addEventListener('click', function() {
     // get current value
@@ -14,3 +26,5 @@ increaseButtonEl.addEventListener('click', function() {
     // set counter elemnet with new value
     counterValueEl.textContent = newValue;
 });
+
+
